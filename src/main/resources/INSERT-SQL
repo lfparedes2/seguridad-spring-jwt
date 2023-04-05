@@ -1,0 +1,16 @@
+--- crear la base con el nombre: loginjwt
+--- la clave encriptada es : password
+
+INSERT INTO `usuarios` (`id`, `email`, `nombre`, `password`, `username`) VALUES
+(1, 'fernando@gmail.com', 'Fernando', '$2a$10$edI4NUVqVo0ByDErt1ATFOT6dRevhcChheOCmAFVOfJ2CyN60Z3Ze', 'fernando'),
+(2, 'luis@hotmail.com', 'Luis', '$2a$10$edI4NUVqVo0ByDErt1ATFOT6dRevhcChheOCmAFVOfJ2CyN60Z3Ze', 'admin');
+
+
+INSERT INTO `roles` (`id`, `nombre`) VALUES
+(1, 'ROLE_USER'),
+(2, 'ROLE_ADMIN');
+
+
+INSERT INTO `usuarios_roles` (`usuario_id`, `rol_id`) VALUES
+(1, 1),
+(2, 2);
